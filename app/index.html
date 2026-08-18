@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chatter — Every comment starts something</title>
+  <meta name="description" content="Chatter is the welcoming home for online conversation. Post a thread, reply in real time, and find your people.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="brand"><div class="logo">C</div>Chatter</div>
+      <div class="links">
+        <a href="#explore">Explore</a>
+        <a href="#communities">Communities</a>
+        <a href="#pricing">Pricing</a>
+        <button class="btn btn-ghost" id="loginBtn">Log in</button>
+        <button class="btn btn-primary" id="joinBtn">Join free</button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="tag"><span class="dot"></span> Live discussions happening now</span>
+        <h1>Every comment<br><span class="grad">starts something.</span></h1>
+        <p class="sub">Chatter is the welcoming home for online conversation. Post a thread, reply in real time, and find your people in communities built around what you love.</p>
+        <div class="cta">
+          <button class="btn btn-primary" id="createBtn">Create your account</button>
+          <button class="btn btn-ghost" id="browseBtn">Browse communities</button>
+        </div>
+        <div class="stats">
+          <div><b id="statComments">2.4M</b><span>Comments posted</span></div>
+          <div><b>50k+</b><span>Communities</span></div>
+          <div><b>4.9/5</b><span>Member rating</span></div>
+        </div>
+      </div>
+
+      <div class="card" aria-label="Live comment feed">
+        <div class="chead">
+          <span># welcome</span>
+          <span class="live"><span class="dot"></span><span id="onlineCount">128</span> online</span>
+        </div>
+        <div id="feed"></div>
+        <form class="composer" id="composer" autocomplete="off">
+          <input id="commentInput" placeholder="Write a comment…" aria-label="Write a comment" maxlength="240">
+          <button class="btn btn-primary" type="submit">Post</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Chatter</span>
+      <span>Privacy · Terms · Guidelines</span>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

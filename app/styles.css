@@ -1,0 +1,55 @@
+:root{
+  --bg:#f7f8fc; --card:#fff; --ink:#141726; --muted:#6a7185;
+  --brand:#4f6bff; --brand2:#8a5cff; --accent:#12c39a; --line:#eceef6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);
+  background:
+    radial-gradient(900px 420px at 85% -8%,rgba(138,92,255,.14),transparent),
+    radial-gradient(760px 420px at -5% 6%,rgba(79,107,255,.12),transparent),
+    var(--bg);
+  min-height:100vh;
+}
+.wrap{max-width:1160px;margin:0 auto;padding:0 34px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px}
+.logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900}
+.links{display:flex;gap:24px;align-items:center;color:var(--muted);font-weight:500;font-size:15px}
+.links a{color:inherit;text-decoration:none}
+.links a:hover{color:var(--ink)}
+.btn{cursor:pointer;border:0;font-weight:700;border-radius:11px;padding:11px 20px;font-size:15px;transition:transform .06s ease,box-shadow .2s ease}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff}
+.btn-primary:hover{box-shadow:0 8px 22px rgba(79,107,255,.35)}
+.btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:#d7dbef}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;padding:52px 0 26px}
+.tag{display:inline-flex;align-items:center;gap:8px;background:#edefff;color:#3a44c8;font-weight:700;font-size:13px;padding:7px 13px;border-radius:999px;margin-bottom:22px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(18,195,154,.6);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(18,195,154,.5)}70%{box-shadow:0 0 0 7px rgba(18,195,154,0)}100%{box-shadow:0 0 0 0 rgba(18,195,154,0)}}
+h1{font-size:52px;line-height:1.07;letter-spacing:-1.1px;margin-bottom:18px}
+.grad{background:linear-gradient(135deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--muted);font-size:18px;line-height:1.6;max-width:520px;margin-bottom:28px}
+.cta{display:flex;gap:14px;margin-bottom:26px;flex-wrap:wrap}
+.cta .btn{padding:14px 26px;font-size:16px}
+.stats{display:flex;gap:34px;flex-wrap:wrap}
+.stats b{font-size:24px;display:block}
+.stats span{color:var(--muted);font-size:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 30px 60px rgba(40,40,90,.12)}
+.chead{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px;margin-bottom:15px}
+.live{display:flex;align-items:center;gap:7px;color:var(--accent);font-weight:700}
+.cmt{display:flex;gap:12px;padding:14px;border-radius:14px;background:#fafbff;margin-bottom:11px;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.av{width:40px;height:40px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:15px}
+.who{font-weight:700;font-size:14px}
+.time{color:#9aa0ac;font-size:12px;margin-left:6px}
+.txt{color:#41465a;font-size:14px;line-height:1.5;margin-top:3px;word-break:break-word}
+.react{margin-top:9px;display:flex;gap:16px;color:#9aa0ac;font-size:12px;font-weight:700}
+.react button{background:none;border:0;cursor:pointer;color:inherit;font:inherit;padding:0}
+.react .like.on,.react .like:hover{color:var(--brand)}
+.composer{display:flex;gap:10px;margin-top:14px}
+.composer input{flex:1;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px;outline:none}
+.composer input:focus{border-color:var(--brand)}
+footer{border-top:1px solid var(--line);margin-top:38px;padding:22px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:900px){.hero{grid-template-columns:1fr}h1{font-size:42px}.links a{display:none}}
